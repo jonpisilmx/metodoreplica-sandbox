@@ -348,7 +348,7 @@
             color: var(--surface-accent);
         }
 
-        /* SECCIÓN PROGRAMAS Y PRECIOS (Inspirada en el layout de servicios de la imagen) */
+        /* SECCIÓN PROGRAMAS Y PRECIOS */
         .pricing-section {
             padding: 80px 0;
             background-color: var(--bg-body);
@@ -447,7 +447,7 @@
             opacity: 0.9;
         }
 
-        /* Banner Diplomado Completo (Estilo bloque destacado) */
+        /* Banner Diplomado Completo */
         .diploma-card {
             background-color: #FFFFFF;
             border: 2px solid var(--surface-accent);
@@ -478,7 +478,7 @@
             margin-bottom: 8px;
         }
 
-        /* Becas / Hoteleros / Comunidad (Estilo ref 3) */
+        /* SECCIÓN DE BECAS Y BENEFICIOS ESPECIALES */
         .why-us {
             padding: 80px 0;
             background-color: var(--surface-accent);
@@ -498,14 +498,33 @@
         .perks-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            gap: 24px;
         }
 
         .perk-card {
             background-color: #FFFFFF;
             border-radius: var(--radius-md);
-            padding: 28px;
+            padding: 24px;
             color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        .perk-image-box {
+            width: 100%;
+            height: 180px;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .perk-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .perk-tag {
@@ -633,7 +652,7 @@
                     </div>
                 </div>
                 <div class="hero-image-box">
-                    <img src="https://plus.unsplash.com/premium_photo-1714340369457-525ad4ea2ee9" alt="REPLICA Method - Learning Process" style="width:100%; border-radius:12px;">
+                    <img src="https://metodoreplica.online/images/hero-image.png" alt="REPLICA Method - Learning Process" style="width:100%; border-radius:12px;">
                 </div>
             </div>
         </section>
@@ -653,25 +672,25 @@
                     <div class="replica-card">
                         <div class="replica-card-icon"><i class="fas fa-book-open"></i></div>
                         <h4>R - Reading</h4>
-                        <p>Aprende a pronunciar los sonidos del inglés, el ritmo y la musicalidad del idioma.</p>
+                        <p>Decodificación visual y fonética. Conexión de símbolos con sonidos reales.</p>
                     </div>
 
                     <div class="replica-card accent">
                         <div class="replica-card-icon"><i class="fas fa-headphones"></i></div>
                         <h4>E/P - Ears / Processing</h4>
-                        <p>Escucha el inglés sin acento latino, entrena tu oído para los diferentes acentos.</p>
+                        <p>Entrenamiento auditivo profundo y aproximación a la lógica sintáctica.</p>
                     </div>
 
                     <div class="replica-card">
                         <div class="replica-card-icon"><i class="fas fa-microphone"></i></div>
                         <h4>L/I - Lip-Sync / Iteration</h4>
-                        <p>Entrena los músculos de tu boca y pronuncia con fluidez hasta lograr la perfección.</p>
+                        <p>Imitación física de un nativo y desarrollo de memoria muscular gesticular.</p>
                     </div>
 
                     <div class="replica-card">
                         <div class="replica-card-icon"><i class="fas fa-brain"></i></div>
                         <h4>C/A - Creating / Acquisition</h4>
-                        <p>Generación de frases propias y asimilación profunda del idioma en contextos múltiples.</p>
+                        <p>Generación de frases propias y asimilación profunda del idioma.</p>
                     </div>
                 </div>
             </div>
@@ -708,7 +727,7 @@
                     <div class="price-card featured">
                         <div>
                             <span class="price-badge">Intermedio</span>
-                            <h3>Nivel 2: Frases funcionales</h3>
+                            <h3>Nivel 2: Fluidez</h3>
                             <div class="price-amount">$4,200</div>
                             <div class="price-duration">18 Sesiones (6 semanas)</div>
                             <ul class="price-features">
@@ -724,9 +743,9 @@
                     <div class="price-card">
                         <div>
                             <span class="price-badge">Avanzado</span>
-                            <h3>Nivel 3: Confianza y Fluidez</h3>
+                            <h3>Nivel 3: Confianza</h3>
                             <div class="price-amount">$5,600</div>
-                            <div class="price-duration">18 Sesiones (6 semanas)</div>
+                            <div class="price-duration">24 Sesiones (8 semanas)</div>
                             <ul class="price-features">
                                 <li><strong>Enfoque:</strong> Sintaxis propia y autonomía.</li>
                                 <li><strong>Resultado:</strong> Resolución de problemas complejos.</li>
@@ -752,11 +771,11 @@
                     </div>
                 </div>
 
-                <!-- Banner Mejor Inversión: Diplomado Básico -->
+                <!-- Banner Mejor Inversión: Diplomado Completo -->
                 <div class="diploma-card">
                     <div class="diploma-info">
                         <span class="diploma-tag">🔥 Mejor Opción de Inversión</span>
-                        <h3>Diplomado Básico (Niveles 1 al 3)</h3>
+                        <h3>Diplomado Completo (Niveles 1 al 3)</h3>
                         <p>Precio regular: <span style="text-decoration: line-through;">$12,600</span> | Ahorra pagando anticipado: <strong style="color:var(--surface-accent); font-size:1.3rem;">$11,300</strong></p>
                         <p><small><i class="far fa-credit-card"></i> Aceptamos Tarjeta de Crédito y 3 Meses Sin Intereses.</small></p>
                     </div>
@@ -775,19 +794,29 @@
                 <div class="perks-grid">
                     <!-- Exclusivo Hoteleros -->
                     <div class="perk-card">
-                        <span class="perk-tag">Exclusivo Hoteleros 🏨</span>
-                        <h3>Beneficio para Empleados</h3>
-                        <p>Inscribe a <strong>2 o más empleados</strong> por un precio especial de <strong>$10,500 c/u</strong> (curso completo).</p>
-                        <p style="margin-top:10px;"><strong>Beca Directa 100%:</strong> Para gerentes y dueños de hoteles al inscribir a su equipo (incluye a un familiar o a ti mismo gratis).</p>
-                        <p style="margin-top:8px; font-size:0.8rem; color:var(--text-muted);">*Se puede impartir en instalaciones del hotel.</p>
+                        <div>
+                            <div class="perk-image-box">
+                                <img src="https://plus.unsplash.com/premium_photo-1664301003485-19ee193e9734?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Beneficio para Empleados">
+                            </div>
+                            <span class="perk-tag">Exclusivo Hoteleros 🏨</span>
+                            <h3>Beneficio para Empleados</h3>
+                            <p>Inscribe a <strong>2 o más empleados</strong> por un precio especial de <strong>$10,500 c/u</strong> (curso completo).</p>
+                            <p style="margin-top:10px;"><strong>Beca Directa 100%:</strong> Para gerentes y dueños de hoteles al inscribir a su equipo (incluye a un familiar o a ti mismo gratis).</p>
+                        </div>
+                        <p style="margin-top:12px; font-size:0.8rem; color:var(--text-muted);">*Se puede impartir en instalaciones del hotel.</p>
                     </div>
 
                     <!-- Residente Mazunte -->
                     <div class="perk-card">
-                        <span class="perk-tag">Mazunte Residente 🌴</span>
-                        <h3>Apoyo a la Comunidad</h3>
-                        <p><strong>15% de Beca</strong> presentando tu INE con domicilio en Mazunte.</p>
-                        <p style="margin-top:10px; font-size:0.85rem; color:var(--text-secondary);">*Válido pagando por mes adelantado en contrataciones individuales.</p>
+                        <div>
+                            <div class="perk-image-box">
+                                <img src="https://plus.unsplash.com/premium_photo-1750859860349-aa21325a040e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mazunte Residente">
+                            </div>
+                            <span class="perk-tag">Mazunte Residente 🌴</span>
+                            <h3>Apoyo a la Comunidad</h3>
+                            <p><strong>15% de Beca</strong> presentando tu INE con domicilio en Mazunte.</p>
+                        </div>
+                        <p style="margin-top:12px; font-size:0.85rem; color:var(--text-secondary);">*Válido pagando por mes adelantado en contrataciones individuales.</p>
                     </div>
                 </div>
             </div>
