@@ -97,6 +97,16 @@
             color: var(--text-secondary);
         }
 
+        .top-header a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .top-header a:hover {
+            color: var(--surface-accent);
+        }
+
         /* Navegación Principal */
         header.main-header {
             background-color: #FFFFFF;
@@ -167,6 +177,12 @@
             color: var(--surface-accent);
         }
         
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
         .phone-contact {
             color: var(--text-primary);
             text-decoration: none;
@@ -178,6 +194,16 @@
         }
         
         .phone-contact i {
+            color: var(--surface-accent);
+        }
+
+        .social-link-icon {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            transition: color 0.2s;
+        }
+
+        .social-link-icon:hover {
             color: var(--surface-accent);
         }
 
@@ -547,16 +573,81 @@
             font-size: 0.9rem;
         }
 
+        /* SECCIÓN MODALIDAD ONLINE */
+        .online-section {
+            padding: 80px 0;
+            background-color: #FFFFFF;
+        }
+
+        .online-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .online-card {
+            background-color: var(--surface-muted);
+            border-radius: var(--radius-md);
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .online-card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-sm);
+            background-color: var(--surface-accent);
+            color: var(--text-on-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .online-card h3 {
+            font-size: 1.25rem;
+        }
+
+        .online-card p {
+            font-size: 0.95rem;
+        }
+
         /* Footer */
         footer.main-footer {
             background-color: var(--surface-muted);
             padding: 40px 0;
             text-align: left;
         }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
         
         .main-footer p {
             color: var(--text-secondary);
             font-size: 0.9rem;
+        }
+
+        .footer-social {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .footer-social i {
+            font-size: 1.3rem;
+            color: var(--surface-accent);
         }
 
         /* Floating WhatsApp Button */
@@ -589,6 +680,7 @@
             .hero-badge-ref { justify-content: center; }
             .hero-stats { justify-content: center; border: none; padding: 0; }
             .hero-actions-container { flex-direction: column; }
+            .footer-content { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
@@ -598,7 +690,12 @@
     <div class="top-header">
         <div class="container">
             <div>REINVENTA ACADEMIA &nbsp;&nbsp;&bull;&nbsp;&nbsp; MAZUNTE</div>
-            <div>DIPLOMADO INGLÉS 2026</div>
+            <div>
+                DIPLOMADO INGLÉS 2026 &nbsp;&bull;&nbsp; 
+                <a href="http://instagram.com/metodoreplica" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i> @metodoreplica
+                </a>
+            </div>
         </div>
     </div>
 
@@ -613,11 +710,17 @@
                 <li><a href="#metodo">Método</a></li>
                 <li><a href="#manifiesto">Manifiesto</a></li>
                 <li><a href="#niveles">Inversión</a></li>
+                <li><a href="#online">Online</a></li>
                 <li><a href="https://wa.me/529581060861" target="_blank">Inscribirme</a></li>
             </ul>
-            <a href="tel:+529581060861" class="phone-contact">
-                <i class="fas fa-phone-alt"></i> +52 (958) 106 08 61
-            </a>
+            <div class="header-actions">
+                <a href="tel:+529581060861" class="phone-contact">
+                    <i class="fas fa-phone-alt"></i> +52 (958) 106 08 61
+                </a>
+                <a href="http://instagram.com/metodoreplica" target="_blank" class="social-link-icon" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
         </div>
     </header>
 
@@ -816,7 +919,45 @@
                             <h3>Apoyo a la Comunidad</h3>
                             <p><strong>15% de Beca</strong> presentando tu INE con domicilio en Mazunte.</p>
                         </div>
-                        <p style="margin-top:12px; font-size:0.85rem; color:var(--text-secondary);">*Válido pagando por mes adelantado en contrataciones individuales.</p>
+                        <p style="margin-top:12px; font-size:0.85rem; color:var(--text-secondary);">*Válido pagando por mes adelantado in contrataciones individuales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN MODALIDAD ONLINE -->
+        <section id="online" class="online-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-header-text">
+                        <h2>Modalidad <span class="accent-text">Online e Híbrida</span></h2>
+                        <p>Flexibilidad total para aprender a tu ritmo desde cualquier lugar.</p>
+                    </div>
+                </div>
+
+                <div class="online-grid">
+                    <div class="online-card">
+                        <div class="online-card-icon">
+                            <i class="fas fa-laptop-house"></i>
+                        </div>
+                        <h3>Formatos Flexibles</h3>
+                        <p>Todos nuestros cursos pueden impartirse <strong>100% en línea</strong> o en <strong>modalidad combinada</strong> (combinando clases presenciales y virtuales según tu disponibilidad).</p>
+                    </div>
+
+                    <div class="online-card">
+                        <div class="online-card-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3>Material Personalizado</h3>
+                        <p>Contamos con material de apoyo especializado a través de <strong>cuestionarios y tests personalizados</strong> diseñados para dar seguimiento al progreso de cada alumno.</p>
+                    </div>
+
+                    <div class="online-card">
+                        <div class="online-card-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>Refuerzo Continuo por WhatsApp</h3>
+                        <p>Recibe material complementario y ejercicios breves directamente en tu WhatsApp entre clase y clase para reforzar temas clave en tus tiempos libres.</p>
                     </div>
                 </div>
             </div>
@@ -825,9 +966,14 @@
 
     <!-- Footer -->
     <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2026 Academia Reinventa &bull; Mazunte, Oaxaca.</p>
-            <p><small>REPLICA Method por Jonathan | Coaching de Vida & Social Media Strategy</small></p>
+        <div class="container footer-content">
+            <div>
+                <p>&copy; 2026 Academia Reinventa &bull; Mazunte, Oaxaca.</p>
+                <p><small>REPLICA Method por Jonathan | Coaching de Vida & Social Media Strategy</small></p>
+            </div>
+            <a href="http://instagram.com/metodoreplica" class="footer-social" target="_blank" rel="noopener">
+                <i class="fab fa-instagram"></i> Síguenos en @metodoreplica
+            </a>
         </div>
     </footer>
 
